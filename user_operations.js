@@ -4,7 +4,7 @@
 cls
 db.users.aggregate([
 {
-$match : { userName : { $nin : ["joe", "joeadmin", "Bholbrooks", "Commandalkon", "Lmarthe", "Bzoelle", "cstuart"] }}
+$match : { userName : { $nin : ["names", "to", "exclude", "go", "here"] }}
 },
 {
 $group :{ _id : "$company", total_logins : { $sum : "$totalLogins"},
@@ -19,7 +19,7 @@ $group :{ _id : "$company", total_logins : { $sum : "$totalLogins"},
 cls
 db.users.aggregate([
 {
-$match : { userName : {$nin : ["joe", "joeadmin", "Bholbrooks", "Commandalkon", "Lmarthe", "Bzoelle", "cstuart"] }}
+$match : { userName : {$nin : ["names", "to", "exclude", "go", "here"] }}
 },
 {
 $group:
@@ -43,7 +43,7 @@ last_login: {$first: "$lastLogin"},
 cls
 db.users.aggregate([
 {
-$match : { userName : {$nin : ["joe", "joeadmin", "Bholbrooks", "Commandalkon", "Lmarthe", "Bzoelle", "cstuart"] }}
+$match : { userName : {$nin : ["names", "to", "exclude", "go", "here"]  }}
 },
 {
 $group:
@@ -69,7 +69,7 @@ total_logins: {$first: "$totalLogins"},
 cls
 db.users.aggregate([
 {
-$match : { userName : {$nin : ["joe", "joeadmin", "Bholbrooks", "Commandalkon", "Lmarthe", "Bzoelle", "cstuart"] }}
+$match : { userName : {$nin : ["names", "to", "exclude", "go", "here"] }}
 },
 {
 $group:
